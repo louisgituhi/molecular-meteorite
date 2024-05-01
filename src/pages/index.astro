@@ -1,0 +1,146 @@
+---
+import { Image } from "astro:assets"
+const tag = "</>"
+import bun from "../images/bun.svg"
+import githhub from "../images/github.svg"
+import express from "../images/expressjs.svg"
+import astro from "../images/astro.svg"
+import git from "../images/git.svg"
+import github from "../images/mongodb.svg"
+import javascript from "../images/javascript.svg"
+import node from "../images/nodejs.svg"
+import pocketbase from "../images/pocket-base.svg"
+import typescript from "../images/typescript.svg"
+import react from "../images/react.svg"
+import mongo from "../images/mongodb.svg"
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Home</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+	</head>
+	<body class=" max-w-xl my-10 mx-auto font-inter">
+			<header class=" ">
+				<nav class=" flex items-center justify-between">
+					<Image class="" src={bun} width={40} alt="bun img" />
+					<span>Open to work</span>
+				</nav>
+			</header>
+
+			<div class=" mt-10">
+				<h1 class=" text-md font-semibold tracking-wide"> Hi, I'm Louis Wanyika</h1>
+				<p class=" mt-2">As a software engineer I craft excellent, intuitive user interfaces 
+						that seamlessly blend technical expertise and UI design.
+				</p>
+			</div>
+
+			<!-- connect  -->
+			<section class=" mt-8 flex w-full items-center gap-3">
+
+				<a class=" flex items-center border border-gray-300 w-full leading-none gap-2 p-2 text-sm rounded-lg">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(173,184,194,1)"><path d="M18.3362 18.339H15.6707V14.1622C15.6707 13.1662 15.6505 11.8845 14.2817 11.8845C12.892 11.8845 12.6797 12.9683 12.6797 14.0887V18.339H10.0142V9.75H12.5747V10.9207H12.6092C12.967 10.2457 13.837 9.53325 15.1367 9.53325C17.8375 9.53325 18.337 11.3108 18.337 13.6245V18.339H18.3362ZM7.00373 8.57475C6.14573 8.57475 5.45648 7.88025 5.45648 7.026C5.45648 6.1725 6.14648 5.47875 7.00373 5.47875C7.85873 5.47875 8.55173 6.1725 8.55173 7.026C8.55173 7.88025 7.85798 8.57475 7.00373 8.57475ZM8.34023 18.339H5.66723V9.75H8.34023V18.339ZM19.6697 3H4.32923C3.59498 3 3.00098 3.5805 3.00098 4.29675V19.7033C3.00098 20.4202 3.59498 21 4.32923 21H19.6675C20.401 21 21.001 20.4202 21.001 19.7033V4.29675C21.001 3.5805 20.401 3 19.6675 3H19.6697Z"></path></svg>
+					<p>Connect with me</p>
+					<svg class=" ml-auto " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(173,184,194,1)"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
+				</a>
+
+				<a class=" p-2 rounded-lg border border-gray-300">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(173,184,194,1)"><path d="M20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C13.6418 20 15.1681 19.5054 16.4381 18.6571L17.5476 20.3214C15.9602 21.3818 14.0523 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12V13.5C22 15.433 20.433 17 18.5 17C17.2958 17 16.2336 16.3918 15.6038 15.4659C14.6942 16.4115 13.4158 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C13.1258 7 14.1647 7.37209 15.0005 8H17V13.5C17 14.3284 17.6716 15 18.5 15C19.3284 15 20 14.3284 20 13.5V12ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9Z"></path></svg>
+				</a>
+
+				<a class=" p-2 rounded-lg border border-gray-300">
+					<Image src={githhub} alt="github logo" width={24} />
+				</a>
+
+				<a class=" p-2 rounded-lg border border-gray-300">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(173,184,194,1)"><path d="M18.2048 2.25H21.5128L14.2858 10.51L22.7878 21.75H16.1308L10.9168 14.933L4.95084 21.75H1.64084L9.37084 12.915L1.21484 2.25H8.04084L12.7538 8.481L18.2048 2.25ZM17.0438 19.77H18.8768L7.04484 4.126H5.07784L17.0438 19.77Z"></path></svg>
+				</a>
+
+			</section>
+
+			<!-- technologies  -->
+			<section class=" mt-10 w-full">
+
+				<div class=" flex items-center gap-2">
+					<h3 class=" text-sm font-semibold">Technology</h3>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="rgba(173,184,194,1)"><path d="M20.0834 10.4999L21.2855 11.2212C21.5223 11.3633 21.599 11.6704 21.457 11.9072C21.4147 11.9776 21.3559 12.0365 21.2855 12.0787L12.0001 17.6499L2.71463 12.0787C2.47784 11.9366 2.40106 11.6295 2.54313 11.3927C2.58536 11.3223 2.64425 11.2634 2.71463 11.2212L3.91672 10.4999L12.0001 15.3499L20.0834 10.4999ZM20.0834 15.1999L21.2855 15.9212C21.5223 16.0633 21.599 16.3704 21.457 16.6072C21.4147 16.6776 21.3559 16.7365 21.2855 16.7787L12.5145 22.0412C12.1979 22.2313 11.8022 22.2313 11.4856 22.0412L2.71463 16.7787C2.47784 16.6366 2.40106 16.3295 2.54313 16.0927C2.58536 16.0223 2.64425 15.9634 2.71463 15.9212L3.91672 15.1999L12.0001 20.0499L20.0834 15.1999ZM12.5145 1.30864L21.2855 6.5712C21.5223 6.71327 21.599 7.0204 21.457 7.25719C21.4147 7.32757 21.3559 7.38647 21.2855 7.42869L12.0001 12.9999L2.71463 7.42869C2.47784 7.28662 2.40106 6.97949 2.54313 6.7427C2.58536 6.67232 2.64425 6.61343 2.71463 6.5712L11.4856 1.30864C11.8022 1.11864 12.1979 1.11864 12.5145 1.30864Z"></path></svg>
+				</div>
+
+				<div class=" grid grid-cols-2 md:grid-cols-3 gap-2 items-start mt-4 ">
+
+					<div class=" border border-zinc-300 rounded-lg p-2 flex items-center gap-2">
+						<Image class=" saturate-200" src={react} alt="react logo" width={20} height={20} />
+						<span class=" text-sm">React</span>
+					</div>
+
+					<div class=" border border-zinc-300 rounded-lg p-2 flex items-center gap-2">
+						<Image class=" saturate-200" src={astro} alt="astro logo" width={15} height={15} />
+						<span class=" text-sm">Astro</span>
+					</div>
+
+					<div class=" border border-zinc-300 rounded-lg p-2 flex items-center gap-2">
+						<Image class=" saturate-200" src={typescript} alt="typescript logo" width={20} />
+						<span class=" text-sm">Typescript</span>
+					</div>
+
+					<div class=" border border-zinc-300 rounded-lg p-2 flex items-center gap-2">
+						<Image class=" saturate-200" src={javascript} alt="javascript logo" width={20} />
+						<span class=" text-sm">javascript</span>
+					</div>
+
+					<div class=" border border-zinc-300 rounded-lg p-2 flex items-center gap-2">
+						<!-- <Image class=" saturate-0" src={node} alt="node logo" width={20} /> -->
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(173,184,194,1)"><path d="M12.8873 1.36173C12.3396 1.03958 11.6604 1.03958 11.1127 1.36173L3.36271 5.92056C2.8282 6.23498 2.5 6.8088 2.5 7.42894V16.571C2.5 17.1912 2.8282 17.765 3.36272 18.0794L5.98596 19.6225C7.31923 20.4068 9 19.4454 9 17.8986V7.74655H7V17.8986L4.5 16.428V7.57193L12 3.16016L19.5 7.57193V16.428L12 20.8398L10.2316 19.7996L9.21757 21.5234L11.1127 22.6382C11.6604 22.9604 12.3396 22.9604 12.8873 22.6382L20.6373 18.0794C21.1718 17.765 21.5 17.1912 21.5 16.571V7.42894C21.5 6.8088 21.1718 6.23498 20.6373 5.92056L12.8873 1.36173ZM13.9999 7.49998C12.6372 7.49998 11.6712 7.85114 11.0504 8.46993C10.4336 9.08484 10.3135 9.80885 10.3135 10.2313C10.3135 10.7862 10.4705 11.289 10.7951 11.7048C11.1076 12.1053 11.5199 12.3537 11.9146 12.5159C12.6341 12.8116 13.5358 12.9086 14.2587 12.9863L14.346 12.9957C15.1774 13.0856 15.7998 13.1627 16.2263 13.3411C16.4189 13.4217 16.4983 13.4954 16.531 13.5379C16.5524 13.5658 16.5934 13.6278 16.5934 13.7977C16.5934 14.0618 16.5027 14.2319 16.2204 14.3926C15.873 14.5904 15.2596 14.7396 14.3368 14.7396C13.4218 14.7396 12.7838 14.5705 12.4192 14.3181C12.1357 14.1218 11.9273 13.821 11.9822 13.1683L9.98923 13.0007C9.88075 14.29 10.3479 15.3167 11.2808 15.9625C12.1325 16.5521 13.2518 16.7396 14.3368 16.7396C15.414 16.7396 16.4289 16.5753 17.2098 16.1307C18.0558 15.6491 18.5934 14.8482 18.5934 13.7977C18.5934 13.2414 18.4381 12.7369 18.1162 12.3184C17.8054 11.9144 17.3942 11.6617 16.9981 11.496C16.2701 11.1915 15.3576 11.0932 14.6296 11.0147H14.6296L14.5609 11.0073C13.7274 10.9172 13.1036 10.8423 12.6748 10.666C12.4808 10.5863 12.4025 10.5137 12.3716 10.4742C12.3528 10.4501 12.3135 10.394 12.3135 10.2313C12.3135 10.1538 12.3363 10.0121 12.4624 9.88637C12.5847 9.76449 12.9618 9.49998 13.9999 9.49998C14.9904 9.49998 15.5674 9.60515 15.897 9.80064C16.1123 9.92838 16.3451 10.1633 16.3761 10.9329L18.3745 10.8524C18.3243 9.60675 17.8694 8.64527 16.9173 8.08051C16.0795 7.58349 15.0094 7.49998 13.9999 7.49998Z"></path></svg>
+						<span class=" text-sm">Nodejs</span>
+					</div>
+
+					<div class=" border border-zinc-300 rounded-lg p-2 flex items-center gap-2">
+						<Image class=" saturate-200" src={bun} alt="bun logo" width={20} />
+						<span class=" text-sm">Bun</span>
+					</div>
+
+					<div class=" border border-zinc-300 rounded-lg p-2 flex items-center gap-2">
+						<Image class=" saturate-200" src={express} alt="express logo" width={20} />
+						<span class=" text-sm">Express</span>
+					</div>
+
+					<div class=" border border-zinc-300 rounded-lg p-2 flex items-center gap-2">
+						<Image class=" saturate-200" src={git} alt="git logo" width={20} />
+						<span class=" text-sm">Git</span>
+					</div>
+
+					<div class=" border border-zinc-300 rounded-lg p-2 flex items-center gap-2">
+						<Image class=" saturate-200" src={githhub} alt="githhub logo" width={20} />
+						<span class=" text-sm">Githhub</span>
+					</div>
+
+					<div class=" border border-zinc-300 rounded-lg p-2 flex items-center gap-2">
+						<Image class=" saturate-200" src={pocketbase} alt="pocketbase logo" width={20} />
+						<span class=" text-sm">Pocketbase</span>
+					</div>
+
+					<div class=" border border-zinc-300 rounded-lg p-2 flex items-center gap-2">
+						<Image class=" saturate-200" src={mongo} alt="mongo logo" width={10} />
+						<span class=" text-sm">Mongo</span>
+					</div>
+
+				</div>
+				
+
+			</section>
+
+			<!-- projects -->
+			<section class=" mt-10">
+				<h3 class=" text-xs">PROJECTS <span class=" text-sm">{tag}</span></h3>
+			</section>
+
+	</body>
+</html>
