@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets"
+import { ViewTransitions } from "astro:transitions"
 
 // images 
 import bun from "../images/bun.svg"
@@ -47,6 +48,7 @@ const date = new Date().getFullYear();
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+		<ViewTransitions />
 	</head>
 	<body class=" w-[80%] mx-auto md:max-w-xl my-10 md:mx-auto font-inter">
 			<header class="">
