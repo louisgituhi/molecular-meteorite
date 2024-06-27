@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+const pageTitle = "CV"
 ---
 
 <html lang="en">
@@ -9,14 +10,21 @@ import { ViewTransitions } from "astro:transitions";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+        <title>{pageTitle}</title>
         <ViewTransitions />
-        <title>CV</title>
 	</head>
     <body class=" w-[80%] mx-auto md:max-w-xl my-10 md:mx-auto font-inter">
             <a href="/" class=" cursor-pointer flex items-center gap-2 border border-gray-300 p-2 rounded-lg hover:border-emerald-400">
@@ -45,11 +53,21 @@ import { ViewTransitions } from "astro:transitions";
         </div>
 
         <div class=" mt-10">
-            <h2 class="text-md font-bold">Work Experience</h2>
+            <h2 class="text-md font-bold text-lg">Work Experience</h2>
+
             <div class=" mt-4">
-                <span class="text-md">lui digitals</span>
+                <span class="text-md font-semibold">Kingdombank Limited</span>
+                <span class=" ml-4 text-neutral-500 text-sm">2024-Present</span>
+                <h2 class=" text-sm">Intern Central Operations</h2>
+                <p class=" text-sm mt-4">Am currently work in the operations department doing 
+                    data clean-up, Quality Assurance and Digitization.
+                </p>
+            </div>
+
+            <div class=" mt-4">
+                <span class="text-md font-semibold">lui digitals</span>
                 <span class=" text-blue-400 bg-blue-100 p-1 rounded-lg text-sm">Remote</span>
-                <span class=" ml-4 text-neutral-500 text-sm">2023 - Present</span>
+                <span class=" ml-4 text-neutral-500 text-sm">2023-2024</span>
                 <h2 class=" text-sm">Junior Front-end Engineer</h2>
                 <p class=" text-sm mt-4">I took charge for the design and successfull 
                     deployment of econo construction company
@@ -60,7 +78,7 @@ import { ViewTransitions } from "astro:transitions";
             </div>
 
             <div class=" mt-8">
-                <span class="text-md">County Government of Nyandarua</span>
+                <span class="text-md font-semibold">County Government of Nyandarua</span>
                 <span class=" ml-4 text-neutral-500 text-sm">2022</span>
                 <h2 class=" text-sm">Junior ICT Officer</h2>
                 <p class=" text-sm mt-4">I assisted the ICT Officer in network maintenance, establishing LAN networks under
@@ -74,7 +92,7 @@ import { ViewTransitions } from "astro:transitions";
             </div>
 
             <div class=" mt-20">
-                <h2 class="text-md font-bold">Education</h2>
+                <h2 class="text-md font-bold text-lg">Education</h2>
                     <div class=" mt-4">
                         <span class="text-md">Murang'a University of Techonology</span>
                         <span class=" ml-10 text-neutral-500 text-sm">2019-2023</span>
@@ -96,7 +114,7 @@ import { ViewTransitions } from "astro:transitions";
             </div>
 
             <div class=" mt-20">
-                <h2 class=" text-md font-bold">Referees</h2>
+                <h2 class=" text-md font-bold text-lg">Referees</h2>
                 
                 <div class=" mt-4 text-sm">
                     <h4>Moses Irungu</h4>
