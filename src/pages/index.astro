@@ -1,29 +1,15 @@
 ---
-import { Image } from "astro:assets"
-import { ViewTransitions } from "astro:transitions"
-
-// images 
-import bun from "../images/bun.svg"
-import githhub from "../images/github.svg"
-import express from "../images/expressjs.svg"
-import astro from "../images/astro.svg"
-import git from "../images/git.svg"
-import hono from "../images/hono.svg"
-import github from "../images/github.svg"
-import javascript from "../images/javascript.svg"
-import pocketbase from "../images/pocket-base.svg"
-import typescript from "../images/typescript.svg"
-import react from "../images/react.svg"
-import mongo from "../images/mongodb.svg"
-import econo from "../images/econo.png"
-import blog from "../images/blog-page.png"
-import docker from "../images/docker.svg"
-import api from "../images/api-bg.png"
-import louis from "../images/louis.svg"
+import { slide, ViewTransitions } from "astro:transitions"
+import Connect from "../components/connect.astro"
+import Technologies from "../components/technologies.astro"
+import Projects from "../components/projects.astro"
+import Header from "../components/header.astro"
+import Footer from "../components/footer.astro"
+import Reachout from "../components/reachout.astro"
+import Quote from "../components/quotes.astro"
 
 // js 
 const pageTitle = "Louis Wanyika"
-const date = new Date().getFullYear();
 ---
 
 <!doctype html>
@@ -50,258 +36,21 @@ const date = new Date().getFullYear();
 		<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
 		<ViewTransitions />
 	</head>
-	<body class=" w-[80%] mx-auto md:max-w-xl my-10 md:mx-auto font-inter">
-			<header class="">
-				<nav class=" flex items-center justify-between">
-					<Image class=" p-1 rounded-full border border-black" src={louis} width={45} height={45} alt="bun img" />
-					<div class=" flex items-center gap-2">
-						<span class=" size-2 bg-[#50ff76] rounded-full"></span>
-						<p>Open to work</p>
-					</div>
-				</nav>
-			</header>
+	<body transition:animate="slide" class=" w-[80%] mx-auto md:max-w-xl my-10 md:mx-auto font-inter">
 
-			<div class=" mt-10">
-				<h1 class=" text-lg tracking-tight"> Hi, I'm Louis Wanyika</h1>
-				<p class=" mt-2">Am a software engineer who crafts user-friendly and intuitively designed web apps that are responsive and load fast🚀.
-				</p>
-				<p class=" mt-4">Do you want a develeper? Because thats how you know you want a developer!</p>
-			</div>
+			<Header /> 
 
-			<!-- connect  -->
-			<section class=" mt-8 flex w-full items-center gap-3">
+			<Quote />
 
-				<a href="https://linkedin.com/in/louis-wanyika-31558b252"class=" flex items-center border border-gray-300 w-full leading-none gap-2 p-2 text-sm rounded-lg hover:border-emerald-200 cursor-pointer">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(173,184,194,1)"><path d="M18.3362 18.339H15.6707V14.1622C15.6707 13.1662 15.6505 11.8845 14.2817 11.8845C12.892 11.8845 12.6797 12.9683 12.6797 14.0887V18.339H10.0142V9.75H12.5747V10.9207H12.6092C12.967 10.2457 13.837 9.53325 15.1367 9.53325C17.8375 9.53325 18.337 11.3108 18.337 13.6245V18.339H18.3362ZM7.00373 8.57475C6.14573 8.57475 5.45648 7.88025 5.45648 7.026C5.45648 6.1725 6.14648 5.47875 7.00373 5.47875C7.85873 5.47875 8.55173 6.1725 8.55173 7.026C8.55173 7.88025 7.85798 8.57475 7.00373 8.57475ZM8.34023 18.339H5.66723V9.75H8.34023V18.339ZM19.6697 3H4.32923C3.59498 3 3.00098 3.5805 3.00098 4.29675V19.7033C3.00098 20.4202 3.59498 21 4.32923 21H19.6675C20.401 21 21.001 20.4202 21.001 19.7033V4.29675C21.001 3.5805 20.401 3 19.6675 3H19.6697Z"></path></svg>
-					<p>Connect with me</p>
-					<svg id="icon" class=" ml-auto " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(173,184,194,1)"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
-				</a>
+			<Connect />
 
-				<a href="mailto:louisgituhi@gmail.com" class=" p-2 rounded-lg border border-gray-300 hover:border-emerald-200 cursor-pointer">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(173,184,194,1)"><path d="M20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C13.6418 20 15.1681 19.5054 16.4381 18.6571L17.5476 20.3214C15.9602 21.3818 14.0523 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12V13.5C22 15.433 20.433 17 18.5 17C17.2958 17 16.2336 16.3918 15.6038 15.4659C14.6942 16.4115 13.4158 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C13.1258 7 14.1647 7.37209 15.0005 8H17V13.5C17 14.3284 17.6716 15 18.5 15C19.3284 15 20 14.3284 20 13.5V12ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9Z"></path></svg>
-				</a>
+			<Technologies />
 
-				<a href="https://github.com/louisgituhi" class=" p-2 rounded-lg border border-gray-300 hover:border-emerald-200 cursor-pointer">
-					<Image src={githhub} alt="github logo" width={24} />
-				</a>
+			<Projects />
 
-				<a href="https://twitter.com/Lithium_III" class=" p-2 rounded-lg border border-gray-300 hover:border-emerald-200 cursor-pointer">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(173,184,194,1)"><path d="M18.2048 2.25H21.5128L14.2858 10.51L22.7878 21.75H16.1308L10.9168 14.933L4.95084 21.75H1.64084L9.37084 12.915L1.21484 2.25H8.04084L12.7538 8.481L18.2048 2.25ZM17.0438 19.77H18.8768L7.04484 4.126H5.07784L17.0438 19.77Z"></path></svg>
-				</a>
+			<Reachout />
 
-			</section>
-
-			<!-- technologies  -->
-			<section class=" mt-10 w-full">
-
-				<div class=" flex items-center gap-2">
-					<h3 class=" text-sm font-semibold">Technology</h3>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="rgba(173,184,194,1)"><path d="M20.0834 10.4999L21.2855 11.2212C21.5223 11.3633 21.599 11.6704 21.457 11.9072C21.4147 11.9776 21.3559 12.0365 21.2855 12.0787L12.0001 17.6499L2.71463 12.0787C2.47784 11.9366 2.40106 11.6295 2.54313 11.3927C2.58536 11.3223 2.64425 11.2634 2.71463 11.2212L3.91672 10.4999L12.0001 15.3499L20.0834 10.4999ZM20.0834 15.1999L21.2855 15.9212C21.5223 16.0633 21.599 16.3704 21.457 16.6072C21.4147 16.6776 21.3559 16.7365 21.2855 16.7787L12.5145 22.0412C12.1979 22.2313 11.8022 22.2313 11.4856 22.0412L2.71463 16.7787C2.47784 16.6366 2.40106 16.3295 2.54313 16.0927C2.58536 16.0223 2.64425 15.9634 2.71463 15.9212L3.91672 15.1999L12.0001 20.0499L20.0834 15.1999ZM12.5145 1.30864L21.2855 6.5712C21.5223 6.71327 21.599 7.0204 21.457 7.25719C21.4147 7.32757 21.3559 7.38647 21.2855 7.42869L12.0001 12.9999L2.71463 7.42869C2.47784 7.28662 2.40106 6.97949 2.54313 6.7427C2.58536 6.67232 2.64425 6.61343 2.71463 6.5712L11.4856 1.30864C11.8022 1.11864 12.1979 1.11864 12.5145 1.30864Z"></path></svg>
-				</div>
-
-				<div class=" grid grid-cols-2 md:grid-cols-3 gap-2 items-start mt-4 ">
-
-					<div class=" p-2 flex items-center gap-2">
-						<Image class=" saturate-200" src={react} alt="react logo" width={20} height={20} />
-						<span class=" text-sm">React</span>
-					</div>
-
-					<div class=" p-2 flex items-center gap-2">
-						<Image class=" saturate-200" src={astro} alt="astro logo" width={15} height={15} />
-						<span class=" text-sm">Astro</span>
-					</div>
-
-					<div class=" p-2 flex items-center gap-2">
-						<Image class=" saturate-200" src={typescript} alt="typescript logo" width={20} />
-						<span class=" text-sm">Typescript</span>
-					</div>
-
-					<div class=" p-2 flex items-center gap-2">
-						<Image class=" saturate-200" src={javascript} alt="javascript logo" width={20} />
-						<span class=" text-sm">Javascript</span>
-					</div>
-
-					<div class=" p-2 flex items-center gap-2">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(37,234,17,1)"><path d="M12.8873 1.36173C12.3396 1.03958 11.6604 1.03958 11.1127 1.36173L3.36271 5.92056C2.8282 6.23498 2.5 6.8088 2.5 7.42894V16.571C2.5 17.1912 2.8282 17.765 3.36272 18.0794L5.98596 19.6225C7.31923 20.4068 9 19.4454 9 17.8986V7.74655H7V17.8986L4.5 16.428V7.57193L12 3.16016L19.5 7.57193V16.428L12 20.8398L10.2316 19.7996L9.21757 21.5234L11.1127 22.6382C11.6604 22.9604 12.3396 22.9604 12.8873 22.6382L20.6373 18.0794C21.1718 17.765 21.5 17.1912 21.5 16.571V7.42894C21.5 6.8088 21.1718 6.23498 20.6373 5.92056L12.8873 1.36173ZM13.9999 7.49998C12.6372 7.49998 11.6712 7.85114 11.0504 8.46993C10.4336 9.08484 10.3135 9.80885 10.3135 10.2313C10.3135 10.7862 10.4705 11.289 10.7951 11.7048C11.1076 12.1053 11.5199 12.3537 11.9146 12.5159C12.6341 12.8116 13.5358 12.9086 14.2587 12.9863L14.346 12.9957C15.1774 13.0856 15.7998 13.1627 16.2263 13.3411C16.4189 13.4217 16.4983 13.4954 16.531 13.5379C16.5524 13.5658 16.5934 13.6278 16.5934 13.7977C16.5934 14.0618 16.5027 14.2319 16.2204 14.3926C15.873 14.5904 15.2596 14.7396 14.3368 14.7396C13.4218 14.7396 12.7838 14.5705 12.4192 14.3181C12.1357 14.1218 11.9273 13.821 11.9822 13.1683L9.98923 13.0007C9.88075 14.29 10.3479 15.3167 11.2808 15.9625C12.1325 16.5521 13.2518 16.7396 14.3368 16.7396C15.414 16.7396 16.4289 16.5753 17.2098 16.1307C18.0558 15.6491 18.5934 14.8482 18.5934 13.7977C18.5934 13.2414 18.4381 12.7369 18.1162 12.3184C17.8054 11.9144 17.3942 11.6617 16.9981 11.496C16.2701 11.1915 15.3576 11.0932 14.6296 11.0147H14.6296L14.5609 11.0073C13.7274 10.9172 13.1036 10.8423 12.6748 10.666C12.4808 10.5863 12.4025 10.5137 12.3716 10.4742C12.3528 10.4501 12.3135 10.394 12.3135 10.2313C12.3135 10.1538 12.3363 10.0121 12.4624 9.88637C12.5847 9.76449 12.9618 9.49998 13.9999 9.49998C14.9904 9.49998 15.5674 9.60515 15.897 9.80064C16.1123 9.92838 16.3451 10.1633 16.3761 10.9329L18.3745 10.8524C18.3243 9.60675 17.8694 8.64527 16.9173 8.08051C16.0795 7.58349 15.0094 7.49998 13.9999 7.49998Z"></path></svg>
-						<span class=" text-sm">Nodejs</span>
-					</div>
-
-					<div class=" p-2 flex items-center gap-2">
-						<Image class=" saturate-200" src={bun} alt="bun logo" width={20} />
-						<span class=" text-sm">Bun</span>
-					</div>
-
-					<div class=" p-2 flex items-center gap-2">
-						<Image class=" saturate-200" src={express} alt="express logo" width={20} />
-						<span class=" text-sm">Express</span>
-					</div>
-
-					<div class=" p-2 flex items-center gap-2">
-						<Image class=" saturate-200" src={hono} alt="hono logo" width={20} />
-						<span class=" text-sm">Hono</span>
-					</div>
-
-					<div class=" p-2 flex items-center gap-2">
-						<Image class=" saturate-200" src={git} alt="githhub logo" width={20} />
-						<span class=" text-sm">Git</span>
-					</div>
-
-					<div class=" p-2 flex items-center gap-2">
-						<Image class=" saturate-200" src={pocketbase} alt="pocketbase logo" width={20} />
-						<span class=" text-sm">Pocketbase</span>
-					</div>
-
-					<div class=" p-2 flex items-center gap-2">
-						<Image class=" saturate-200" src={docker} alt="docker logo" width={30} />
-						<span class=" text-sm">Docker</span>
-					</div>
-
-				</div>
-				
-
-			</section>
-
-			<!-- projects -->
-			<section class=" mt-10">
-
-				<div class=" flex items-center gap-2">
-					<h3 class=" text-xs">PROJECTS</h3>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="rgba(173,184,194,1)"><path d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z"></path></svg>
-				</div>
-
-				<div class=" mt-10">
-					<div class=" w-full border border-zinc-300 rounded-lg h-auto hover:border-emerald-200 cursor-pointer scale-100 hover:scale-105 duration-300">
-						<div class=" m-2">
-							<Image src={econo} alt="econo landing page" class=" rounded-t-lg" />
-						</div>
-						<div class=" m-2 bg-zinc-200 border border-b rounded-b-lg">
-								<h2 class=" m-2">Econo Building and Construction</h2>
-								<p class=" m-2 text-sm">A modern and intuitively designed landing page for a Construction
-									company that sells construction materials.
-								</p>
-								<div class=" m-2">
-									<div class=" flex items-center gap-2 saturate-0">
-										<a href="https://github.com/louisgituhi/econo-landing-page"><Image src={github} alt="github logo" width={22} /></a>
-										<span><Image src={javascript} alt="javascript logo" width={20} /></span>
-										<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(173,184,194,1)"><path d="M11.9996 4.85999C8.82628 4.85999 6.84294 6.44665 6.04961 9.61999C7.23961 8.03332 8.62794 7.43832 10.2146 7.83499C11.12 8.06109 11.7666 8.71757 12.4835 9.44545C13.6507 10.6295 15.0004 12 17.9496 12C21.1229 12 23.1063 10.4133 23.8996 7.23998C22.7096 8.82665 21.3213 9.42165 19.7346 9.02499C18.8292 8.79889 18.1827 8.1424 17.4657 7.41452C16.2995 6.23047 14.9498 4.85999 11.9996 4.85999ZM6.04961 12C2.87628 12 0.892943 13.5867 0.0996094 16.76C1.28961 15.1733 2.67794 14.5783 4.26461 14.975C5.17 15.2011 5.81657 15.8576 6.53354 16.5855C7.70073 17.7695 9.05039 19.14 11.9996 19.14C15.1729 19.14 17.1563 17.5533 17.9496 14.38C16.7596 15.9667 15.3713 16.5617 13.7846 16.165C12.8792 15.9389 12.2326 15.2824 11.5157 14.5545C10.3495 13.3705 8.99982 12 6.04961 12Z"></path></svg></span>
-										<span><Image src={astro} alt="astro logo" width={15} height={15} /></span>
-										<div class=" ml-auto">
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(173,184,194,1)"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
-										</div>
-									</div>
-								</div>
-						</div>
-					</div>
-
-					<div class=" w-full border border-zinc-300 rounded-lg h-auto mt-4 hover:border-emerald-200 cursor-pointer scale-100 hover:scale-105 duration-300">
-						<div class=" m-2">
-							<Image src={blog} alt="econo landing page" class=" rounded-t-lg" />
-						</div>
-						<div class=" m-2 bg-zinc-200 border border-b rounded-b-lg">
-								<h2 class=" m-2">Blog app</h2>
-								<p class=" m-2 text-sm">A small-scale blog app written in react, react-router, javascript and pocketbase as the database.
-								</p>
-								<div class=" m-2">
-									<div class=" flex items-center gap-2 saturate-0">
-										<a href="https://github.com/louisgituhi/blog-app"><Image src={github} alt="github logo" width={22} /></a>
-										<span><Image src={react} alt="react logo" width={20} /></span>
-										<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(173,184,194,1)"><path d="M11.9996 4.85999C8.82628 4.85999 6.84294 6.44665 6.04961 9.61999C7.23961 8.03332 8.62794 7.43832 10.2146 7.83499C11.12 8.06109 11.7666 8.71757 12.4835 9.44545C13.6507 10.6295 15.0004 12 17.9496 12C21.1229 12 23.1063 10.4133 23.8996 7.23998C22.7096 8.82665 21.3213 9.42165 19.7346 9.02499C18.8292 8.79889 18.1827 8.1424 17.4657 7.41452C16.2995 6.23047 14.9498 4.85999 11.9996 4.85999ZM6.04961 12C2.87628 12 0.892943 13.5867 0.0996094 16.76C1.28961 15.1733 2.67794 14.5783 4.26461 14.975C5.17 15.2011 5.81657 15.8576 6.53354 16.5855C7.70073 17.7695 9.05039 19.14 11.9996 19.14C15.1729 19.14 17.1563 17.5533 17.9496 14.38C16.7596 15.9667 15.3713 16.5617 13.7846 16.165C12.8792 15.9389 12.2326 15.2824 11.5157 14.5545C10.3495 13.3705 8.99982 12 6.04961 12Z"></path></svg></span>
-										<span><Image src={pocketbase} alt="pocketbase logo" width={20} height={20} /></span>
-										<div class=" ml-auto">
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(173,184,194,1)"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
-										</div>
-									</div>
-								</div>
-						</div>
-					</div>
-
-					<div class=" w-full border border-zinc-300 rounded-lg h-auto mt-4 hover:border-emerald-200 cursor-pointer scale-100 hover:scale-105 duration-300">
-						<div class=" m-2">
-							<Image src={api} alt="api image" class=" rounded-t-lg" />
-						</div>
-						<div class=" m-2 bg-zinc-200 border border-b rounded-b-lg">
-								<h2 class=" m-2">Planck</h2>
-								<p class=" m-2 text-sm">An api endpoint that returns a list of scientist names, their inventions and discoveries, image url, origin location and their life.
-								</p>
-								<div class=" m-2">
-									<div class=" flex items-center gap-2 saturate-0">
-										<a href="https://github.com/louisgituhi/planck"><Image src={github} alt="github logo" width={22} /></a>
-										<span><Image src={bun} alt="bun logo" width={20} /></span>
-										<span><Image src={docker} alt="docker logo" /></span>
-										<span><Image src={typescript} alt="typescript logo" width={16} height={16} /></span>
-										<span><Image src={hono} alt="hono log" width={16} /></span>
-										<div class=" ml-auto">
-											<a href="https://zonal-dorisa-louisgituhi-a992d867.koyeb.app/">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(173,184,194,1)"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
-											</a>
-										</div>
-									</div>
-								</div>
-						</div>
-					</div>
-
-				</div>
-			</section>
-
-			<section class=" mt-10">
-				<h4 class=" text-md">Lets connect</h4>
-				<p class="text-sm">Wanna build something cool together or just say hi?</p>
-
-				<div class="border border-gray-300 w-full leading-none gap-2 p-2 mt-4 text-sm rounded-lg hover:border-emerald-200 cursor-pointer">
-					<a href="mailto:louisgituhi@gmail.com">
-						<h4 class="">Send an email</h4>
-							<span class=" flex items-center text-zinc-600">I'll get back to you asap
-						<svg class=" ml-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(173,184,194,1)"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
-					</span>
-					</a>
-				</div>
-
-				<div class=" flex items-center gap-2">
-
-					<div class="border border-gray-300 w-full leading-none gap-2 p-2 mt-4 text-sm rounded-lg hover:border-emerald-200 cursor-pointer">
-						<a href="https://github.com/louisgituhi">
-							<h4 class="">Github</h4>
-							<span class=" flex items-center text-zinc-600">Check out my profile
-								<svg class=" ml-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(173,184,194,1)"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
-							</span>
-						</a>
-					</div>
-
-					<div class="border border-gray-300 w-full leading-none gap-2 p-2 mt-4 text-sm rounded-lg hover:border-emerald-200 cursor-pointer">
-						<a href="/cv/">
-							<h4 class="">My CV</h4>
-							<span class=" flex items-center text-zinc-600">Have a look!
-								<svg class=" ml-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(173,184,194,1)"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
-							</span>
-						</a>
-					</div>
-
-				</div>
-
-				<div class="border border-gray-300 w-full leading-none gap-2 p-2 mt-4 text-sm rounded-lg hover:border-emerald-200 cursor-pointer">
-					<a href="https://linkedin.com/in/louis-wanyika-31558b252">
-						<h4 class="">LinkedIn</h4>
-						<span class=" flex items-center text-zinc-600">Lets connect
-							<svg class=" ml-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(173,184,194,1)"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
-						</span>
-					</a>
-				</div>
-
-			</section>
-
-			<section class=" text-center mt-10">
-				<h4>Thanks for visiting :)</h4>
-				<span class=" text-sm">Stay frosty</span>
-
-				<div class=" mt-10">
-					<p class=" font-sacramento text-xl">Louis Wanyika Gituhi</p>
-				</div>
-
-				<div class=" mt-10 text-sm">
-					<p>&copy {date} Designed and Made by Louis</p>
-					<p>All rights reserved</p>
-				</div>
-			</section>
+			<Footer />
 
 	</body>
 </html>
