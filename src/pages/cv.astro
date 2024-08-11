@@ -1,6 +1,7 @@
 ---
 import { slide, ViewTransitions } from "astro:transitions";
 const pageTitle = "CV"
+import Link from "../components/link.astro";
 ---
 
 <html lang="en">
@@ -27,10 +28,8 @@ const pageTitle = "CV"
         <ViewTransitions />
 	</head>
     <body transition:animate="slide" class=" w-[80%] mx-auto md:max-w-xl my-10 md:mx-auto font-inter">
-            <a href="/" class=" cursor-pointer flex items-center gap-2 border border-gray-300 p-2 rounded-lg bg-green-100 text-green-600 hover:border-emerald-400">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path></svg>
-                    <p>Go Back</p>
-            </a>
+        
+        <Link />
         <div class=" mt-12">
             <div class=" text-sm">
                 <h2 class=" text-md font-bold">Louis Wanyika</h2>
