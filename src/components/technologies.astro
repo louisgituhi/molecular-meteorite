@@ -12,6 +12,8 @@ import astro from "../images/astro.svg"
 import docker from "../images/docker.svg"
 import bun from "../images/bun.svg"
 import supabase from "../images/supabase.svg"
+import tailwind from "../images/tailwindcss.svg"
+import next from "../images/nextjs.svg"
 ---
 
 <!-- technologies  -->
@@ -23,6 +25,11 @@ import supabase from "../images/supabase.svg"
     </div>
 
     <div class=" grid grid-cols-2 md:grid-cols-3 gap-2 items-start mt-4 ">
+
+        <div class=" p-2 flex items-center gap-2">
+            <Image class=" saturate-200" src={next} alt="next logo" width={20} height={20} />
+            <span class=" text-sm">Nextjs</span>
+        </div>
 
         <div class=" p-2 flex items-center gap-2">
             <Image class=" saturate-200" src={react} alt="react logo" width={20} height={20} />
@@ -42,6 +49,11 @@ import supabase from "../images/supabase.svg"
         <div class=" p-2 flex items-center gap-2">
             <Image class=" saturate-200" src={javascript} alt="javascript logo" width={20} />
             <span class=" text-sm">Javascript</span>
+        </div>
+
+        <div class=" p-2 flex items-center gap-2">
+            <Image class=" saturate-200" src={tailwind} alt="tailwind logo" width={20} height={20} />
+            <span class=" text-sm">TailwindCSS</span>
         </div>
 
         <div class=" p-2 flex items-center gap-2">
