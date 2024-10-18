@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 
 import bun from "../images/bun.svg"
+import instanceLine from "../images/instance-line.svg"
 import githhub from "../images/github.svg"
 import astro from "../images/astro.svg"
 import git from "../images/git.svg"
@@ -26,28 +27,30 @@ import api from "../images/api-bg.png"
 
     <div class=" mt-10">
 
-        <div class=" w-full border border-zinc-300 rounded-lg h-auto mt-4 hover:border-emerald-200 cursor-pointer scale-100 hover:scale-105 duration-300">
-            <div class=" m-2">
-                <Image src={api} alt="api image" class=" rounded-t-lg" />
-            </div>
-            <div class=" m-2 bg-zinc-200 border border-b rounded-b-lg">
-                    <h2 class=" m-2">Planck</h2>
-                    <p class=" m-2 text-sm">An api endpoint that returns a list of scientist names, their inventions and discoveries, image url, origin location and their life.
+        <div class=" w-full border rounded-lg h-auto hover:border-emerald-200 cursor-pointer scale-100 hover:scale-105 duration-300">
+            
+            <div class=" m-4 ">
+                <Image src={instanceLine} alt="instance line" />
+                <div class=" mt-4">
+                    <h2>Planck</h2>
+                    <p class=" mt-2 text-sm">An api endpoint that returns a list of scientists data eg:
+                        <span class=" text-xs font-semibold">name, date of birth, nationality, awards, discoveries, date of death etc</span>
                     </p>
-                    <div class=" m-2">
-                        <div class=" flex items-center gap-2 saturate-0">
-                            <a href="https://github.com/louisgituhi/planck"><Image src={github} alt="github logo" width={22} /></a>
-                            <span><Image src={bun} alt="bun logo" width={20} /></span>
-                            <span><Image src={docker} alt="docker logo" /></span>
-                            <span><Image src={typescript} alt="typescript logo" width={16} height={16} /></span>
-                            <span><Image src={hono} alt="hono log" width={16} /></span>
-                            <div class=" ml-auto">
-                                <a href="https://zonal-dorisa-louisgituhi-a992d867.koyeb.app/">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(173,184,194,1)"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
-                                </a>
-                            </div>
-                        </div>
+                </div>
+                <div class=" mt-4 flex items-center gap-2">
+                    <Image src={bun} alt="github logo" width={20} />
+                    <Image src={typescript} alt="typescript logo" width={16} />
+                    <Image src={hono} alt="hono logo" width={14} />
+                    <Image src={docker} alt="docker logo" />
+                    <div class=" flex items-center gap-2 ml-auto">
+                        <a href="https://github.com/louisgituhi/planck">
+                            <Image src={githhub} alt="github logo" width={20} />
+                        </a>
+                        <a href="https://zonal-dorisa-louisgituhi-a992d867.koyeb.app/" class=" hover:rotate-45 duration-100 text-green-300 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(173,184,194,1)"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
+                        </a>
                     </div>
+                </div>
             </div>
         </div>
 

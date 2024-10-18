@@ -1,0 +1,15 @@
+---
+const { frontmatter } = Astro.props;
+---
+<html>
+  <head>
+    <title>{frontmatter.title}</title>
+  </head>
+  <body class=" w-[80%] mx-auto font-inter md:max-w-xl my-10 md:mx-auto">
+    <h1>{frontmatter.title} by <span class=" font-sacramento">{frontmatter.author}</span></h1>
+    <article>
+      <slot />
+    </article>
+    <p>Written on: {frontmatter.date}</p>
+  </body>
+</html>

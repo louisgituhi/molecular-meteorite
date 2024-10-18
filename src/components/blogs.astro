@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets"
+import ClapperBoard from "../images/clapperboard-line.svg"
+---
+<div class=" mt-10 w-full">
+    <div class=" flex items-center gap-2">
+        <h2>Blogs</h2>
+        <Image src={ClapperBoard} alt="blog icon" width={18} />
+    </div>
+
+    <a href="/posts/campus/">
+        <div class=" border rounded-lg h-20 mt-4">
+            <div class=" m-4">
+                <h2>My life in campus</h2>
+                <p class=" mt-2 text-sm text-gray-500">Joining Murang'a University of Technology (MUT).</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="">
+        <div class=" border rounded-lg h-20 mt-4">
+            <div class=" m-4">
+                <h2>Nextjs</h2>
+                <p class=" mt-2 text-sm text-gray-500">My rough yet so satisfying journey learning Nextjs.</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="">
+        <div class=" border rounded-lg h-20 mt-4">
+            <div class=" m-4">
+                <h2>Learning is hard</h2>
+                <p class=" mt-2 text-sm text-gray-500">How i beat tutorial hell.</p>
+            </div>
+        </div>
+    </a>
+
+</div>
